@@ -1,20 +1,12 @@
 language: python
 python:
 - '2.7'
-script:
-- echo pypi deployment
+- pypy
 deploy:
-  - provider: pypi
-    user: longma
-    password:
-      secure: YtJ7Fi5OgPaLYO6MK2ciEZZ7szfw0vgLB+SQxwHPlDMr0sun5Wqjy7wA+2f+PdpcM+ym7Tzw32MlJk2ARTOWxQeSYDMcnCdT0dvYv1upTDs3IrzOZIwJbmz6zVrlWGqKtWX/mHjZ+gI9a1r4k2jvghrA3+Z4og7pnheCnUuvf2rOZEbtkN+hF9LEDeUoUH/nwCI8EuEpKT+kucCF7Qs8doy3PwoNRjaT5O+w0sQhdctM5MistVc966TBdziibNpcF+7dn0rU+uPTSQJ3RgTEIhdJ1qvfqLUeuDnM2qTPqHk7qTvbfdvJClz1vrXRCdb2vdebkF//FgsH7uTMpypzmMQxhozBMmQjzSu5dl2QlO3r9NS8CgpN0LWkFYMrloOc6v9QU0wbvlXIDfxdmqKLMwOyXf8behPO4qBiSZXdIRhpe0SacOSkZ+cPo02l//2lA+qbVYV68tMTwn5b5E8ZHwU7PBt3O8WU4T4uWQauk+UM7kNJfjf/4FMwt5Gqg2IpMsTREudccFKIZNJ8ZGQNuF4ZJSPQYSQ92cNmz7MfZxQcUmNodPhK4FY8MOYFlhPJELpNmtdMJRm+eZfZ741VY2/8uDsO9stbJFe8zfGoRN5ZIqCLnOvG5VwlrY+RFxSQSfrFkZF0yv1pEo71vRb6wYYw7U6FI6I3praFvkCsK98= 
+  provider: pypi
+  user: longma
+  password:
+    secure: g8vtwb4mqeFqhmHgFG3lxeAYiTZfCsD80O2c8bqVZ6VVpu0mMbU2Qrjd6PBjVuNB3eSySdrHC1H8esuPHY7cmytd2gurGPxZl1dczXzmDSuPOxy44Ml4OZRA2daDSf9dZ1c1pUGfyef7cvjQRxLlIlQp5Rj9qSn2KKmLmxO2QgFafkLEuw/VCe81oAMFq32qfG9DRcE0dbZGkm7P2iHJZhDwUZQpN6rSBSvrpceJHsnZoIHR0ZvtxNxszFFZkBT0kbPjPxc6YovzgASDN167PY+Xi8TL8LHNoiNi2eKPQZutUMKzIKctnUvotiEEgA8EWAfrNLWfz7fUpT/zO1nLhF64TZkNLtdYQ+Ihx4vbO6bzYweXiYK30azezdQODPq22KMKvuVXJsLPZjtLvXGWyYWU4izvGKkDT4p5RCxtCjInhwM3VAlzmX4UBehgi14nugG9UPY86t9bcvLTa8B5D5MrnWdm0LWC/NbNS/uAQvj58XoHs43eHWNo65zVW/XCEYIjM98k4XVU1bqyxEG558dXm9Y5eFswZ0Ec7imwA/pTGehhXBJQQGD80azhonLFD660btuPyj5ocDjg64ulTyCQuYWc/kr2knodhgIyQ0CvZaNkPvAHO0ypLSgSN37Lebwl0ceVCDOiM+bbJaaUN4/ZVlEQ+MFjj949X12nZY4=
+  on:
+    tags: true
     distributions: sdist bdist_wheel
-  - provider: pypi
-    user: longma
-    password:
-      secure: YtJ7Fi5OgPaLYO6MK2ciEZZ7szfw0vgLB+SQxwHPlDMr0sun5Wqjy7wA+2f+PdpcM+ym7Tzw32MlJk2ARTOWxQeSYDMcnCdT0dvYv1upTDs3IrzOZIwJbmz6zVrlWGqKtWX/mHjZ+gI9a1r4k2jvghrA3+Z4og7pnheCnUuvf2rOZEbtkN+hF9LEDeUoUH/nwCI8EuEpKT+kucCF7Qs8doy3PwoNRjaT5O+w0sQhdctM5MistVc966TBdziibNpcF+7dn0rU+uPTSQJ3RgTEIhdJ1qvfqLUeuDnM2qTPqHk7qTvbfdvJClz1vrXRCdb2vdebkF//FgsH7uTMpypzmMQxhozBMmQjzSu5dl2QlO3r9NS8CgpN0LWkFYMrloOc6v9QU0wbvlXIDfxdmqKLMwOyXf8behPO4qBiSZXdIRhpe0SacOSkZ+cPo02l//2lA+qbVYV68tMTwn5b5E8ZHwU7PBt3O8WU4T4uWQauk+UM7kNJfjf/4FMwt5Gqg2IpMsTREudccFKIZNJ8ZGQNuF4ZJSPQYSQ92cNmz7MfZxQcUmNodPhK4FY8MOYFlhPJELpNmtdMJRm+eZfZ741VY2/8uDsO9stbJFe8zfGoRN5ZIqCLnOvG5VwlrY+RFxSQSfrFkZF0yv1pEo71vRb6wYYw7U6FI6I3praFvkCsK98= 
-    distributions: sdist bdist_wheel
-    on:
-      tags: true
-after_deploy:
-- echo DONE
