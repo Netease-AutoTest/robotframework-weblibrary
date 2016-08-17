@@ -1,4 +1,5 @@
 #robotframework-mobileLibrary
+[![Build Status](https://travis-ci.org/Netease-AutoTest/robotframework-weblibrary.svg?branch=master)](https://travis-ci.org/Netease-AutoTest/robotframework-weblibrary)    [![Latest Version](https://img.shields.io/pypi/v/robotframework-weblibrary.svg)](https://pypi.python.org/pypi?%3Aaction=pkg_edit&name=robotframework-weblibrary)
 Here RobotFramework-WebLibrary is a updated library based on robotframework-selenium2library 1.7.4, 
 we add some patches on it according to our project requirements
 
